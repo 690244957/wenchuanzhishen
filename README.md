@@ -1,2 +1,2 @@
-# LawMIniProgramClient
-法律微信小程序前端代码项目
+# 文传之声
+文传之声代码项目
