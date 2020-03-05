@@ -1,0 +1,165 @@
+<!--index.wxml-->
+<!--
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+-->
+<view class="container">
+  <view class="search flex-wrp">
+    <view class="search-left flex-item">
+      <image src="../../images/search.png"></image>
+      <input placeholder="请输入搜索内容" placeholder-class="search-placeholder" />
+    </view>
+  </view>
+  <view class='ticket-container' style="width:100%">
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title' style="padding-left:2em">
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>教务信息</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1' style="margin-left:2em">
+          <text>团学活动</text>
+          <hr class="line-style"/>
+        </view>
+
+      </view>
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <view class="feed-item">
+            <view class="feed-content">
+              <image src="../../images/24213.jpg" style="width: 110px; height: 82.25px;float:right"></image>
+              <view bindtap="bindItemTap" class="answer-body">
+                <view>
+                  <text class="answer-txt">根据我国相关法律法规及司法解释的规定，机动车发生交通事故造成人员伤亡、财产损失时，首先由保险公司在保险责任限额范围内予以赔偿，不足部分由过错方根据过错程度承担相应的赔偿责任。因租赁、借用机动车发生交通事故，导致使用人… </text>
+                  
+                </view>
+                <view class="answer-actions">
+                  <view class="like">
+                    <a>2020.02.06 </a>
+                  </view>
+                  <view class="comments">
+                    <image src="../../images/heart.png" style="width:14px;height:14px;vertical-align:middle"></image>
+                  </view>
+                  <view class="comments">
+                    <a>15</a>
+                  </view>
+                  <!--<view class="follows dot" hidden="true">-->
+                  <!--<a>27 关注</a>-->
+                  <!--</view>-->
+                  <!--<view class="answers dot">-->
+                  <!--<a>27 回答</a>-->
+                  <!--</view>-->
+                  </view>
+              </view>
+            </view>
+          </view>
+        
+       
+          <view bindtap="bindItemTap" class="feed-item">
+            <view class="feed-content">
+              <image src="../../images/24213.jpg" style="width: 110px; height: 82.25px;float:right"></image>
+              <view bindtap="bindItemTap" class="answer-body">
+                <view>
+                  <text class="answer-txt">根据我国相关法律法规及司法解释的规定，机动车发生交通事故造成人员伤亡、财产损失时，首先由保险公司在保险责任限额范围内予以赔偿，不足部分由过错方根据过错程度承担相应的赔偿责任。因租赁、借用机动车发生交通事故，导致使用人… </text>
+                  
+                </view>
+                <view class="answer-actions">
+                  <view class="like">
+                    <a>2020.02.06 </a>
+                  </view>
+                  <view class="comments">
+                    <image src="../../images/heart.png" style="width:14px;height:14px;vertical-align:middle"></image>
+                  </view>
+                  <view class="comments">
+                    <a>15</a>
+                  </view>
+                  <!--<view class="follows dot" hidden="true">-->
+                  <!--<a>27 关注</a>-->
+                  <!--</view>-->
+                  <!--<view class="answers dot">-->
+                  <!--<a>27 回答</a>-->
+                  <!--</view>-->
+                  </view>
+              </view>
+            </view>
+          </view>
+        
+        
+          <view bindtap="bindItemTap" class="feed-item">
+            <view class="feed-content">
+              <image src="../../images/24213.jpg" style="width: 110px; height: 82.25px;float:right"></image>
+              <view bindtap="bindItemTap" class="answer-body">
+                <view>
+                  <text class="answer-txt">根据我国相关法律法规及司法解释的规定，机动车发生交通事故造成人员伤亡、财产损失时，首先由保险公司在保险责任限额范围内予以赔偿，不足部分由过错方根据过错程度承担相应的赔偿责任。因租赁、借用机动车发生交通事故，导致使用人… </text>
+                  
+                </view>
+                <view class="answer-actions">
+                  <view class="like">
+                    <a>2020.02.06 </a>
+                  </view>
+                  <view class="comments">
+                    <image src="../../images/heart.png" style="width:14px;height:14px;vertical-align:middle"></image>
+                  </view>
+                  <view class="comments">
+                    <a>15</a>
+                  </view>
+                  <!--<view class="follows dot" hidden="true">-->
+                  <!--<a>27 关注</a>-->
+                  <!--</view>-->
+                  <!--<view class="answers dot">-->
+                  <!--<a>27 回答</a>-->
+                  <!--</view>-->
+                  </view>
+              </view>
+            </view>
+          </view>
+       
+          <view bindtap="bindItemTap" class="feed-item">
+            <view class="feed-content">
+              <image src="../../images/24213.jpg" style="width: 110px; height: 82.25px;float:right"></image>
+              <view bindtap="bindItemTap" class="answer-body">
+                <view>
+                  <text class="answer-txt">根据我国相关法律法规及司法解释的规定，机动车发生交通事故造成人员伤亡、财产损失时，首先由保险公司在保险责任限额范围内予以赔偿，不足部分由过错方根据过错程度承担相应的赔偿责任。因租赁、借用机动车发生交通事故，导致使用人… </text>
+                  
+                </view>
+                <view class="answer-actions">
+                  <view class="like">
+                    <a>2020.02.06 </a>
+                  </view>
+                  <view class="comments">
+                    <image src="../../images/heart.png" style="width:14px;height:14px;vertical-align:middle"></image>
+                  </view>
+                  <view class="comments">
+                    <a>15</a>
+                  </view>
+                  <!--<view class="follows dot" hidden="true">-->
+                  <!--<a>27 关注</a>-->
+                  <!--</view>-->
+                  <!--<view class="answers dot">-->
+                  <!--<a>27 回答</a>-->
+                  <!--</view>-->
+                  </view>
+              </view>
+            </view>
+          </view>
+        
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+  </view>
+</view>
+
+
+
+
+

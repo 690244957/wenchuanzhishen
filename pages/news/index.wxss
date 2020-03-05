@@ -1,0 +1,150 @@
+/**index.wxss**/
+
+/*
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+*/
+
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.container .search {
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #F8F8FF;
+}
+
+.container .search-left {
+  flex: 8;
+  background: #F8F8FF;
+  text-align: left;
+}
+
+.container .search-left input {
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+
+.search-placeholder {
+  color: #999;
+  line-height: 20rpx;
+}
+
+.container .search .search-left image {
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+
+.container .search .search-right {
+  flex: 1;
+}
+
+.container .search .search-right image {
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container {
+  padding: 0;
+  font-size: 14rpx;
+  background: #f0f4f3;
+  color: #000;
+}
+.title {
+  width: 100%;
+  background: white;
+  display: flex;
+  /* align-items: center;
+  justify-content: space-around; */
+}
+ 
+.title-sel {
+  color: #24272c;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.title-sel  .line-style{
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+ 
+.title-sel-selected{
+  color: #006bff;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-sel-selected .line-style{
+  background: #006bff;
+  height: 6rpx;
+  width: 90rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+ 
+.swiper {
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+  margin: 0 auto;
+}
+/* swiper{
+  height:100%
+} */
+ 
+.record-item {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 5rpx;
+  padding-top: 5rpx;
+  font-size: 30rpx;
+}
+ 
+.name{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  padding: 2vh;
+  border-radius: 10rpx
+}
+scroll-view{
+  height:1000px;
+}
+swiper{
+  height:100%;
+}
+
